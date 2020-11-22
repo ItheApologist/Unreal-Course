@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 
 int Level = 1;
 
@@ -53,9 +54,9 @@ bool PlayGame()
 {
     
     // Set const variables
-    const int Num1 = rand();
-    const int Num2 = rand();
-    const int Num3 = rand();
+    const int Num1 = rand() % Level + Level;
+    const int Num2 = rand() % Level + Level;
+    const int Num3 = rand() % Level + Level;
 
     // Set math of consts in varialbes
     int Sum = Num1 + Num2 + Num3;
@@ -96,6 +97,7 @@ bool PlayGame()
 
 int main()
 {
+    srand(time(NULL));
     PrintIntroduction();
 
     int MaxLevel = 5;
